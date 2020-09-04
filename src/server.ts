@@ -14,8 +14,6 @@ import { isUri } from 'valid-url';
   // Use the body parser middleware for post requests
   app.use(bodyParser.json());
 
-  //    4. deletes any files on the server on finish of the response
-  // RETURNS
   //validate image_url, call filterimage from utils, send file then delete from server
   app.get("/filteredimage", async (req: Request, res: Response) => {
     const { image_url: imageURL } = req.query;
